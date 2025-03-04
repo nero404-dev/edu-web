@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | N.EDU</title>
+    <link rel="stylesheet" href="view_courses.css">
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="pictures/">
+</head>
+<body>
+<div class="body">
+    <!-- header -->
+    <header>
+        <div class="header-btns back-btn">
+            <a href="index.html"><button>Back</button></a>
+        </div>
+        <div class="header-btns adjust-btn">
+            <button id="theme-toggle">Switch to Dark Mode</button>
+        </div>
+    </header>
+
+    <div id="shadow_hr"></div>
+    
+    <!-- main -->
+    <main>
+        <h1>Available Courses</h1>
+        <p id="searchResult"></p>
+        <div id="courseCategories">
+            <!-- Categories will be dynamically displayed here -->
+        </div>
+        <section class="courses">
+            <h2>Mathematics</h2>
+            <div class="image">
+                <img src="pictures/mathematics.jpg">
+            </div>
+            <p>Teaching mathematics is both a passion and a mission to inspire students to appreciate the beauty of numbers and
+                problem-solving. As a teacher with a dedicated website for education, I provide resources, tips, and interactive
+                tools to make learning engaging and accessible. I offer personalized lessons, both in-home and online, tailored to
+                each student's needs and learning pace. Whether it's breaking down complex algebraic equations or exploring
+                real-world applications of geometry, my goal is to build confidence and mastery in mathematics. By combining
+                traditional teaching methods with the convenience of digital platforms, I ensure that every student has the support
+                they need to succeed in their mathematical journey. </p>
+        </section>
+        <section class="courses">
+            <h2>Science</h2>
+            <div class="image">
+                <img src="pictures/science.jpg">
+            </div>
+            <p>Teaching science is about fostering curiosity and helping students understand the world around them through
+                experimentation and discovery. With a dedicated educational website, I provide engaging resources and interactive
+                lessons for topics like biology, chemistry, and physics. Whether through hands-on experiments at home or virtual
+                labs online, I tailor lessons to suit each student's learning style. My aim is to make science exciting and
+                approachable, encouraging critical thinking and problem-solving skills that extend beyond the classroom. </p>
+        </section>
+        <section class="courses">
+            <h2>English Language</h2>
+            <div class="image">
+                <img src="pictures/english-language.jpg">
+            </div>
+            <p>As an English language teacher, I focus on helping students develop their reading, writing, speaking, and grammar
+                skills. Through my educational website, I provide comprehensive resources, including practice exercises,
+                vocabulary-building tools, and engaging lessons for all proficiency levels. I offer both in-person and online
+                lessons, ensuring each session is tailored to individual goals—whether it's improving fluency, mastering essay
+                writing, or preparing for exams. My approach emphasizes creativity and confidence in communication. </p>
+        </section>
+        <section class="courses">
+            <h2>History</h2>
+            <div class="image">
+                <img src="pictures/history.jpg">
+            </div>
+            <p>Teaching history is about more than dates and events—it's about connecting students to the stories of the past and
+                their impact on the present. With my educational platform, I provide resources such as timelines, primary sources,
+                and discussion guides to make history engaging and relevant. Whether through personalized home lessons or
+                interactive online sessions, I encourage critical thinking and a deeper understanding of historical contexts. My
+                goal is to inspire a love for history by making it relatable and thought-provoking. </p>
+        </section>
+        <section class="courses">
+            <h2>Test Preparation</h2>
+            <div class="image">
+                <img src="pictures/test-preparation.jpg">
+            </div>
+            <p>Preparing for tests can be stressful, but I aim to make the process manageable and effective through personalized
+                strategies and resources. On my website, students can access study tips, practice questions, and review materials
+                for standardized tests like the SAT, ACT, or other exams. My in-home and online lessons focus on building
+                test-taking strategies, reinforcing core concepts, and boosting confidence. Together, we turn preparation into
+                progress, ensuring students feel ready to succeed. </p>
+        </section>
+        <section class="courses">
+            <h2>Creative Writing</h2>
+            <div class="image">
+                <img src="pictures/creative-writing.jpg">
+            </div>
+            <p>Creative writing is a journey of self-expression and storytelling, and I love helping students unlock their
+                imaginations. Through my website, I offer prompts, writing exercises, and resources to nurture creativity and
+                improve writing techniques. My in-home and online lessons are tailored to individual goals, whether it's crafting
+                compelling stories, improving poetry, or developing narrative skills. By fostering a love for writing, I help
+                students find their unique voice and tell their stories with confidence. </p>
+        </section>
+    </main>
+
+    <!-- adjust light -> dark mode -->
+    <script>
+        // Select the toggle button
+        const themeToggleButton = document.getElementById('theme-toggle');
+
+        // Add an event listener to the button
+        themeToggleButton.addEventListener('click', () => {
+            // Toggle the 'dark-mode' class on the body
+            document.body.classList.toggle('dark-mode');
+
+            // Update the button text based on the current mode
+            if (document.body.classList.contains('dark-mode')) {
+                themeToggleButton.textContent = 'Switch to Light Mode';
+            } else {
+                themeToggleButton.textContent = 'Switch to Dark Mode';
+            }
+        });
+    </script>
+
+    <!-- js search -->
+    <script>
+        // JavaScript to handle the search query and display relevant sections
+        const urlParams = new URLSearchParams(window.location.search);
+        const searchQuery = urlParams.get('search'); // Get the 'search' parameter from the URL
+
+        // Display the search query
+        const searchResult = document.getElementById('searchResult');
+        if (searchQuery) {
+            searchResult.textContent = `You searched for: "${searchQuery}"`;
+        } else {
+            searchResult.textContent = "Explore our courses below!";
+        }
+
+        // Get all course sections
+        const courseSections = document.querySelectorAll('section.courses');
+
+        // Convert the search query to lowercase for case-insensitive matching
+        const lowerCaseQuery = searchQuery?.toLowerCase() || "";
+
+        // Loop through each section and toggle visibility based on the search query
+        let foundMatch = false;
+        courseSections.forEach((section) => {
+            const sectionTitle = section.querySelector('h2').textContent.toLowerCase(); // Get the section title
+            if (sectionTitle.includes(lowerCaseQuery)) {
+                section.style.display = "block"; // Show the section if it matches the query
+                foundMatch = true;
+            } else {
+                section.style.display = "none"; // Hide the section if it doesn't match
+            }
+        });
+
+        // If no matches are found, display a message
+        if (!foundMatch && searchQuery) {
+            searchResult.textContent += " - No matching courses found.";
+        }
+    </script>
+</div>
+</body>
+</html>

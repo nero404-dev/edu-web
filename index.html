@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | N.EDU</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="variables.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="pictures/">
+</head>
+<body>
+<div class="body">
+    <!-- header -->
+    <header>
+        <!-- Navigation Bar -->
+        <nav>
+            <div class="col-1">
+                <h1><a href="index.html">N.EDU | Nassar's Education</a></h1>
+            </div>
+            <div class="col-2">
+                <ul>
+                    <!-- <li><a href="index.html">Home</a></li> -->
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#location">Location</a></li>
+                    <!-- <li><a href="#contact">Contact</a></li> -->
+                    <li>
+                        <div class="adjust-btn">
+                            <button id="theme-toggle">Switch to Dark Mode</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="resp-col-2">
+                <div class="logo">
+                    <h1><a href="index.html">N.EDU <br>Nassar's Education</a></h1>
+                </div>
+                <div class="dashes">
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                </div>
+            </div>
+        </nav>
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#courses">Courses</a>
+            <a href="#location">Location</a>
+            <!-- <a href="#contact">Contact</a> -->
+    
+            <hr id="resp-hr">
+    
+            <div class="nav-icons">
+                <a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+            </div>
+
+            <div class="adjust-btn">
+                <button id="resp-theme-toggle">Switch to Dark Mode</button>
+            </div>
+        </div>
+
+        <div id="shadow_hr"></div>
+
+        <div class="intro container">
+            <div class="content__container">
+                <h1>
+                    Best Learning<br>
+                    <span class="heading-2">Education Platform</span><br>
+                    <span class="heading-3">with Nassar's Family</span>
+                </h1>
+                <p>
+                    Unlock your full learning potential with our intuitive education platform. We provide an immersive learning
+                    environment that combines <b>INTERACTIVE LESSONS</b>, <i>virtual classrooms</i>, and <u>intelligent feedback</u>.
+                    <br>Our platform adapts to your unique learning style, ensuring personalized progress at every step. You'll stay
+                    motivated and achieve your goals faster than ever. 
+                </p>
+                <form id="searchForm">
+                    <input type="text" id="searchInput" placeholder="What do you want to learn.. " required>
+                    <button type="submit">Search Course</button>
+                </form>
+            </div>
+            <div class="image__container">
+                <img src="pictures/image-1.jpeg" alt="header">
+                <img src="pictures/image-2.jpeg" alt="header">
+
+                <div class="image__content">
+                    <ul>
+                        <li>Get <u>30%</u> off on <b>1st</b> month</li>
+                        <li>Then <u>60%</u> off on <b>2nd</b> month</li>
+                        <li>So <u>20%</u> off on <b>3rd</b> month</li>
+                        <li>Expert teachers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- main -->
+    <main>
+        <section class="about" id="about">
+            <div class="col-1">
+                <div class="image">
+                    <img src="pictures/two-women-teachers.png">
+                </div>
+            </div>
+            <div class="col-2">
+                <h1>About Us</h1>
+                <p><span>Nassar</span>, Welcome to our learning hub, where passion for teaching meets personalized education. What
+                    started as a small
+                    initiative of <u>one-on-one lessons at home</u> has grown into a <b>mission to empower students</b> through
+                    <u>tailored courses</u>
+                    and <u>dedicated guidance</u>. <br><b>Experience with us the joy of learning in a warm, supportive
+                        environment</b>, where every
+                    student receives individual attention to thrive <u>academically</u> and <u>personally</u>. Our vision is to
+                    expand this
+                    journey, inviting family and skilled educators to join us in creating a larger community of learning. Together,
+                    we aim to <u>inspire</u>, <u>educate</u> and <u>shape brighter futures</u>.
+                </p>
+            </div>
+        </section>
+
+        <section class="services" id="services">
+            <h1>Services<br><span>Contact for Prices..</span></h1>
+            <div class="cats">
+                <div class="cat">
+                    <h3>Main Services</h3>
+                    <div class="checked">
+                        <div class="col"><div class="left"><h4>One-on-One Tutoring</h4><p>Personalized lessons tailored to individual student needs. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                        <div class="col"><div class="left"><h4>Small Group Classes </h4><p>Collaborative learning in small, focused groups. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                        <div class="col"><div class="left"><h4>Test Preparation </h4><p>Specialized coaching for exams like SATs, ACTs, or school tests. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                        <div class="col"><div class="left"><h4>Subject-Specific Courses </h4><p>In-depth lessons in Math, Science, English, and more. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                    </div>
+                    <div class="contact">
+                        <a href="tel:+96176134251"><button>Call Me <i class="fa fa-phone" aria-hidden="true"></i></button></a>
+                        <a href="mailto:samertarhini14@gmail.com"><button>Send Email <i class="fa fa-envelope" aria-hidden="true"></i></button></a>
+                    </div>
+                </div>
+
+                <div class="cat">
+                    <h3>Additional Services</h3>
+                    <div class="checked">
+                        <div class="col"><div class="left"><h4>Homework Assistance </h4><p>Help with daily assignments and projects. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                        <div class="col"><div class="left"><h4>Study Skills Coaching </h4><p>Learn effective study habits and time management. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                        <div class="col"><div class="left"><h4>Summer Learning Programs </h4><p>Keep learning alive during school breaks. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                        <div class="col"><div class="left"><h4>Homeschool Support </h4><p>Resources and guidance for homeschooling families. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                    </div>
+                    <div class="contact">
+                        <a href="tel:+96176134251"><button>Call Me <i class="fa fa-phone" aria-hidden="true"></i></button></a>
+                        <a href="mailto:samertarhini14@gmail.com"><button>Send Email <i class="fa fa-envelope" aria-hidden="true"></i></button></a>
+                    </div>
+                </div>
+
+                <div class="cat">
+                    <h3>Specialized Programs</h3>
+                    <div class="checked">
+                        <div class="col"><div class="left"><h4>Creative Writing Workshops </h4><p>Develop storytelling and writing skills. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                        <div class="col"><div class="left"><h4>Public Speaking & Communication </h4><p>Build confidence and presentation skills. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                        <div class="col"><div class="left"><h4>STEM Enrichment Activities </h4><p>Hands-on projects in Science, Technology, Engineering, and Math. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                        <div class="col"><div class="left"><h4>Art & Music Lessons </h4><p>Explore creativity through drawing, painting, or music. </p></div> <div class="right"><i class="fa fa-check" aria-hidden="true"></i></div></div>
+                    </div>
+                    <div class="contact">
+                        <a href="tel:+96176134251"><button>Call Me <i class="fa fa-phone" aria-hidden="true"></i></button></a>
+                        <a href="mailto:samertarhini14@gmail.com"><button>Send Email <i class="fa fa-envelope" aria-hidden="true"></i></button></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr id="hr-between">
+
+        <section class="courses" id="courses">
+            <h1>Courses</h1>
+            <p>Explore, Browse, and Inspect the experience of learning through our <b>carefully designed courses!</b> Whether you're
+                looking to <u>strengthen foundational skills</u>, dive deeper into <u>specific subjects</u>, or <u>prepare for
+                    upcoming exams</u>, we have something for everyone. Our courses are tailored to meet the <b>needs of students
+                    for all levels</b>, ensuring a <u>personalized</u> and <u>engaging learning experience</u>. </p>
+            <ul>
+                <li>Interactive lessons that make learning fun and effective. </li>
+                <li>Expert guidance to help you achieve your academic goals. </li>
+                <li>Flexible schedules to fit your busy lifestyle. </li>
+                <li>Supportive and encouraging environment for all learners. </li>
+            </ul>
+            <div class="view-btn">
+                <a href="view_courses.html"><button>View Courses<i class="fa fa-chevron-right" aria-hidden="true"></i></button></a>
+            </div>
+        </section>
+
+        <section class="location" id="location">
+            <h1>Location</h1>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3394.026813098111!2d35.297638075631674!3d33.449120449336085!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDI2JzU2LjgiTiAzNcKwMTgnMDAuOCJF!5e1!3m2!1sen!2slb!4v1740720396588!5m2!1sen!2slb"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer id="contact">
+        <div class="row-1">
+            <h1><a href="index.html">N.EDU | Nassar's Education</a></h1>
+        </div>
+        <div class="row-1 resp-row-1">
+            <h1><a href="index.html">N.EDU <br>Nassar's Education</a></h1>
+        </div>
+
+        <div class="row-2">
+            <div class="col col-1">
+                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> Navigation</h3>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a style="text-decoration: underline;" href="view_courses.html">Courses</a></li>
+                </ul>
+            </div>
+            <div class="col col-2">
+                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> Location | Map</h3>
+                <p>Coordinates: <span>33°26'56.8"N 35°18'00.8"E</span></p>
+                <p>Plus Code: <span>C8X2+J3X Sarafand</span></p>
+                <a href="https://maps.app.goo.gl/5ZSpkEYVBL2Tzyti9">Google Maps</a>
+            </div>
+            <div class="col col-3">
+                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> Contact Info</h3>
+                <p>Phone: <a href="tel:+96176134251">+961 76 134 251</a></p>
+                <p>Email: <a href="mailto:samertarhini14@gmail.com">samertarhini14@gmail.com</a></p>
+            </div>
+            <div class="col col-4">
+                <h3><i class="fa fa-angle-right" aria-hidden="true"></i> Socials</h3>
+                <div class="socials">
+                    <a href="https://www.instagram.com"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="https://www.youtube.com"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <hr id="footer-hr">
+
+        <div class="copyright">
+            <p>Designed & Developed By "Samer Trh" <br><i class="fa fa-copyright" aria-hidden="true"></i> 2025 | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- js resp nav -->
+    <script>
+        function openNav() {
+          document.getElementById("mySidenav").style.width = "90%";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+        }
+    </script>
+
+    <!-- adjust light -> dark mode -->
+    <script>
+        // Select the toggle button
+        const themeToggleButton = document.getElementById('theme-toggle');
+
+        // Add an event listener to the button
+        themeToggleButton.addEventListener('click', () => {
+            // Toggle the 'dark-mode' class on the body
+            document.body.classList.toggle('dark-mode');
+
+            // Update the button text based on the current mode
+            if (document.body.classList.contains('dark-mode')) {
+                themeToggleButton.textContent = 'Switch to Light Mode';
+            } else {
+                themeToggleButton.textContent = 'Switch to Dark Mode';
+            }
+        });
+    </script>
+
+    <!-- adjust light -> dark mode for resp -->
+    <script>
+        // Select the toggle button
+        const respThemeToggleButton = document.getElementById('resp-theme-toggle');
+
+        // Add an event listener to the button
+        respThemeToggleButton.addEventListener('click', () => {
+            // Toggle the 'dark-mode' class on the body
+            document.body.classList.toggle('dark-mode');
+
+            // Update the button text based on the current mode
+            if (document.body.classList.contains('dark-mode')) {
+                respThemeToggleButton.textContent = 'Switch to Light Mode';
+            } else {
+                respThemeToggleButton.textContent = 'Switch to Dark Mode';
+            }
+        });
+    </script>
+
+    <!-- js search -->
+    <script>
+        // JavaScript to handle the form submission
+        document.getElementById('searchForm').addEventListener('submit', function (e) {
+            e.preventDefault(); // Prevent the default form submission
+            const query = document.getElementById('searchInput').value.trim(); // Get the search input value
+            if (query) {
+                // Redirect to view_courses.html with the search query
+                window.location.href = `view_courses.html?search=${encodeURIComponent(query)}`;
+            } else {
+                alert("Please enter a search term!"); // Alert if the input is empty
+            }
+        });
+    </script>
+</div>
+</body>
+</html>
